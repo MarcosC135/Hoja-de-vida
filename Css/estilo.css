@@ -481,7 +481,7 @@ footer {
 
 @media screen and (max-width:800px) {
 
-    .articulo, .experience, .certificate {
+    .certificate {
         width: 45%;
     }
 
@@ -536,7 +536,7 @@ footer {
         margin: 20px 0;
     }  
     
-    .articulo, .experience, .certificate, .skills {
+    .certificate, .skills {
         width: 90%;
     }
 
@@ -544,7 +544,7 @@ footer {
         margin-bottom: 20px;
     }
 
-    .articulo, .experience, .content-skills {
+    .content-skills {
         margin-top: 20px;
     }
 
