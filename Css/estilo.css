@@ -53,6 +53,8 @@ nav {
     transition: all ease-in-out .6s;
     display: flex;
     gap: 20px;
+    justify-content: center; /* Centra horizontalmente */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
 }
 
 .nav .enlaces-header a {
@@ -74,7 +76,11 @@ nav {
     display: none;
     text-align: center;
     cursor: pointer;
+    position: absolute;
+    left: 20px; /* Mueve el botón a la izquierda */
+    top: 0; /* Asegura que esté alineado en la parte superior */
 }
+
 
 .hamburguer i {
     font-size: 25px;
