@@ -34,7 +34,9 @@ nav {
     box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .2);
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 100;
+    transition: background 0.3s ease-in-out;
 }
 
 .nav {
@@ -42,27 +44,28 @@ nav {
     height: 80px;
     width: 100%;
     align-items: center; 
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
 .enlaces-header {
     font-weight: 300;
-    margin: auto;
     transition: all ease-in-out .6s;
+    display: flex;
+    gap: 20px;
 }
 
 .nav .enlaces-header a {
     color: #5D6678;
     text-decoration: none;
-    margin-left: 20px;
     padding: 12px;
     border-radius: 10px;
+    transition: all 0.3s ease-in-out;
 }
 
 .nav .enlaces-header a:hover {
     color: #fff;
     background-color: #d03d3d;
-    border-color: #d03d3d;
-    transition: all ease-in-out .6s;
 }
 
 .hamburguer {
@@ -70,12 +73,10 @@ nav {
     height: 80px;
     display: none;
     text-align: center;
-    z-index: 100;
     cursor: pointer;
-    transition: color 0.5s ease-in;
 }
 
-.hamburguer>i {
+.hamburguer i {
     font-size: 25px;
     line-height: 80px;
 }
@@ -95,21 +96,16 @@ nav {
     margin: 0 auto;
 }
 
-.contenido-header>img {
+.contenido-header img {
     width: 300px; 
     height: 300px;
-    animation: ease-in animacion 0.5s; 
+    animation: animacion 0.5s ease-in; 
     margin-left: 50px;
 }   
  
 @keyframes animacion {
-    0% {
-        transform: scale(0);
-    }
-
-    100% {
-        transform: scale(1);
-    }
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
 }
 
 .textos-header {
@@ -124,9 +120,9 @@ nav {
 }
 
 .contenido-header a {
-    margin: 28px 0 0 0;
+    margin: 20px auto;
     width: 150px;
-    display: inline-block;
+    display: block;
     background: #d03d3d;
     text-align: center;
     color: white;
@@ -448,19 +444,30 @@ footer {
 
     .contenido-header {
         flex-direction: column;
-        justify-content: space-evenly;
-        height: 700px;
+        height: auto;
+        padding: 20px 0;
     }
 
-    .contenido-header>img {
-        width: 150px; 
-        height: 150px;
-        animation: ease-in animacion 0.5s; 
+    .contenido-header img {
+        width: 200px; 
+        height: 200px;
+        margin: 0;
     } 
 
-    .nav .enlaces-header a {
-        margin: 0;
+    .nav .enlaces-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
+
+    .nav .enlaces-header a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .hamburguer { display: block; }
 
     .textos-header h1 {
         font-size: 40px;
@@ -553,17 +560,16 @@ footer {
         font-size: 25px;
     }
 
-    .contenido-header {
-        width: 100%;
-        height: 560px;
+    .contenido-header a {
+        width: 120px;
+        font-size: 14px;
+        padding: 8px 0;
     }
 
-    .contenido-header>img {
+    .contenido-header img {
         width: 120px; 
         height: 120px;
-        animation: ease-in animacion 0.5s; 
-        margin: 20px 0;
-    }  
+    } 
     
     .articulo, .experience, .certificate, .skills {
         width: 90%;
@@ -621,8 +627,8 @@ footer {
     }
 
     .partFooter {
-        width: 95%;
-        margin: auto;
+        width: 100%;
+        text-align: center;
     }
 
     .partFooter h4 {
@@ -640,6 +646,12 @@ footer {
         align-items: center;
         flex-direction: column;
         clip-path: circle(0.0% at 0 0);
+    }
+
+    .nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
     }
 
     .nav .hamburgueropen {
@@ -661,7 +673,4 @@ footer {
         background-color: #fff;
     }
 
-    .hamburguer {
-        display: block;
-    }
 }

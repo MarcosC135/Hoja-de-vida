@@ -1,19 +1,12 @@
-let enlaces_header = document.querySelectorAll(".enlaces-header")[0];
-let ico_hamburguer = true;
+let enlaces_header = document.querySelector(".enlaces-header");
+let hamburguer = document.querySelector(".hamburguer");
 
-document.querySelectorAll(".hamburguer")[0].addEventListener("click", function(){
-    if(ico_hamburguer){
-        document.querySelectorAll(".hamburguer")[0].style.color ="#fff";
-        ico_hamburguer= false;
-    }else{
-        document.querySelectorAll(".hamburguer")[0].style.color ="#000";
-        ico_hamburguer= true;
-    }
+hamburguer.addEventListener("click", function () {
+    let isOpen = enlaces_header.classList.toggle("hamburgueropen");
+    hamburguer.style.color = isOpen ? "#fff" : "#000";
+});
 
-    enlaces_header.classList.toggle("hamburgueropen");
-})
-
-document.querySelectorAll(".enlaces-header")[0].addEventListener("click", function(){
-    enlaces_header.classList.toggle("hamburgueropen");
-    document.querySelectorAll(".hamburguer")[0].style.color ="#000";
-})
+enlaces_header.addEventListener("click", function () {
+    enlaces_header.classList.remove("hamburgueropen");
+    hamburguer.style.color = "#000";
+});
